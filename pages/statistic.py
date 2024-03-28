@@ -18,6 +18,15 @@ lottie_hello = load_lottieurl(lottie_url_hello)
 st_lottie(lottie_hello, key="hello")
 st.balloons()
 
+html_1 = """
+<div style="background-color:#52BE80;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>สถิติข้อมูลดอกไม้</h5></center>
+</div>
+"""
+st.markdown(html_1, unsafe_allow_html=True)
+st.markdown("")
+
+
 st.page_link("home.py", label="หน้าแรก", icon="🏠")
 st.page_link("pages/statistic.py", label="การนำเสนอข้อมลด้วยสถิติ", icon="1️⃣")
 st.page_link("pages/chart.py", label="การนำเสนอข้อมูลด้วยการจินตทัศ", icon="2️⃣", disabled=False)
