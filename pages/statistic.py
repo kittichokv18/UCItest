@@ -30,7 +30,9 @@ st.write(dt.head(10))
 
 st.subheader("Solidity")
 st.write('ค่ามากที่สุด')
-cl21,cl22,cl23,cl24=st.columns(4)
-cl22.write(dt['Perimeter'].max())
-cl23.write(dt['MajorAxisLength'].max())
-cl24.write(dt['MinorAxisLength'].max())
+# หาค่าสูงสุดของทุกคอลัมน์ยกเว้น 'Class'
+max_values = dt.drop('Class', axis=1).max()
+
+# แสดงค่าสูงสุดของแต่ละคอลัมน์
+for column, max_value in max_values.items():
+    st.write(f"ค่าสูงสุดของคอลัมน์ {column}: {max_value}")
