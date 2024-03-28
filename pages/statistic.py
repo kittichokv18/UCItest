@@ -23,7 +23,7 @@ st.page_link("pages/statistic.py", label="การนำเสนอข้อ�
 st.page_link("pages/chart.py", label="การนำเสนอข้อมูลด้วยการจินตทัศ", icon="2️⃣", disabled=False)
 st.page_link("http://www.google.com", label="Google", icon="🌎")
 
-dt = pd.read_excel('./data/DryBeanDataset/Dry_Bean_Dataset.xlsx')
+dt = pd.read_excel('data/DryBeanDataset/Dry_Bean_Dataset.xlsx')
 
 # Display the dataset
 st.subheader("ชุดข้อมูลถั่วแห้ง")
