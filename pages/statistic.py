@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 import requests
@@ -21,3 +22,8 @@ st.page_link("home.py", label="หน้าแรก", icon="🏠")
 st.page_link("pages/statistic.py", label="การนำเสนอข้อมลด้วยสถิติ", icon="1️⃣")
 st.page_link("pages/chart.py", label="การนำเสนอข้อมูลด้วยการจินตทัศ", icon="2️⃣", disabled=False)
 st.page_link("http://www.google.com", label="Google", icon="🌎")
+
+dt=pd.read_csv('./data/DryBeanDataset/Dry_Bean_Dataset.xlsx')
+
+st.subheader("ชุดข้อมูลถั่วแห้ง")
+st.write(dt.head(10))
