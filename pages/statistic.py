@@ -36,3 +36,11 @@ max_values = dt.drop('Class', axis=1).max()
 # แสดงค่าสูงสุดของแต่ละคอลัมน์
 for column, max_value in max_values.items():
     st.write(f"ค่าสูงสุดของคอลัมน์ {column}: {max_value}")
+
+# หาข้อมูลที่มีค่า Solidity มากที่สุด
+max_solidity_row = dt.loc[dt['Solidity'].idxmax()]
+
+# แสดงข้อมูลของค่า Solidity มากที่สุดและคลาสที่เกี่ยวข้อง
+st.subheader("ข้อมูลมากที่สุดของ Solidity และคลาสที่เกี่ยวข้อง")
+st.write("ค่า Solidity มากที่สุด:", max_solidity_row['Solidity'])
+st.write("คลาส:", max_solidity_row['Class'])
