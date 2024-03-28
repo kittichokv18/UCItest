@@ -41,10 +41,10 @@ st.subheader("max")
 st.write('ค่ามากที่สุด')
 max_values = dt.drop('Class', axis=1).max()
 
-max_row = dt.loc[max_values.idxmax()]
+
 
 # สร้าง DataFrame สำหรับแสดงค่าสูงสุดของแต่ละคอลัมน์พร้อมค่า Class
-max_df = pd.DataFrame({"Column": max_values.index, "Max Value": max_values.values, "Class": max_row['Class']})
+max_df = pd.DataFrame({"Column": max_values.index, "Max Value": max_values.values, "Class": max_values.idxmax})
 
 # แสดงตาราง
 st.subheader("ตารางแสดงค่าสูงสุดของแต่ละคอลัมน์พร้อมค่า Class")
