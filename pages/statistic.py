@@ -46,8 +46,10 @@ max_values = dt.drop('Class', axis=1).max()
 # สร้าง DataFrame สำหรับแสดงค่าสูงสุดของแต่ละคอลัมน์พร้อมค่า Class
 max_df = pd.DataFrame({"Column": max_values.index, "Max Value": max_values.values})
 
+
+
 # แสดงตาราง
-st.subheader("ตารางแสดงค่าสูงสุดของแต่ละคอลัมน์พร้อมค่า Class")
+st.subheader("ตารางแสดงค่าสูงสุดของแต่ละคอลัมน์")
 st.dataframe(max_df)
 
 max_solidity_row = dt.loc[dt['Solidity'].idxmax()]
