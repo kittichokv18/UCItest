@@ -45,6 +45,7 @@ st.subheader("ข้อมูลมากที่สุดของ Solidity �
 st.write("ค่า Solidity มากที่สุด:", max_solidity_row['Solidity'])
 st.write("คลาส:", max_solidity_row['Class'])
 
+max_AspectRation_row = dt.loc[dt['AspectRation'].idxmax()]
 # แสดงข้อมูลของค่า AspectRation มากที่สุดและคลาสที่เกี่ยวข้อง
 st.subheader("ข้อมูลมากที่สุดของ AspectRation และคลาสที่เกี่ยวข้อง")
 st.write("ค่า AspectRation มากที่สุด:", max_AspectRation_row['AspectRation'])
