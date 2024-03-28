@@ -28,7 +28,7 @@ dt = pd.read_csv('data/Dry_Bean_Dataset.csv')
 st.subheader("ชุดข้อมูลถั่วแห้ง")
 st.write(dt.head(10))
 
-st.subheader("Solidity")
+st.subheader("max")
 st.write('ค่ามากที่สุด')
 # หาค่าสูงสุดของทุกคอลัมน์ยกเว้น 'Class'
 max_values = dt.drop('Class', axis=1).max()
