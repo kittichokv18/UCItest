@@ -24,7 +24,7 @@ st.page_link("pages/chart.py", label="การนำเสนอข้อมู
 st.page_link("http://www.google.com", label="Google", icon="🌎")
 
 # Read the dataset from an Excel file using an absolute path
-dt = pd.read_excel('data/Dry_Bean_Dataset.csv')
+dt = pd.read_csv('data/Dry_Bean_Dataset.csv')
 
 # Display the dataset
 st.subheader("ชุดข้อมูลถั่วแห้ง")
