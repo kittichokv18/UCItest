@@ -23,9 +23,15 @@ st.page_link("pages/statistic.py", label="การนำเสนอข้อ�
 st.page_link("pages/chart.py", label="การนำเสนอข้อมูลด้วยการจินตทัศ", icon="2️⃣", disabled=False)
 st.page_link("http://www.google.com", label="Google", icon="🌎")
 
-# Read the dataset from an Excel file using an absolute path
 dt = pd.read_csv('data/Dry_Bean_Dataset.csv')
 
-# Display the dataset
 st.subheader("ชุดข้อมูลถั่วแห้ง")
 st.write(dt.head(10))
+
+st.subheader("Solidity")
+st.write('ค่ามากที่สุด')
+cl21,cl22,cl23,cl24=st.columns(4)
+cl21.write(dt['sepal.length'].max())
+cl22.write(dt['sepal.width'].max())
+cl23.write(dt['petal.length'].max())
+cl24.write(dt['petal.width'].max())
