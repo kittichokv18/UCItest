@@ -41,8 +41,12 @@ st.subheader("max")
 st.write('ค่ามากที่สุด')
 max_values = dt.drop('Class', axis=1).max()
 
-for column, max_value in max_values.items():
-    st.write(f"ค่าสูงสุดของคอลัมน์ {column}: {max_value}")
+# สร้าง DataFrame สำหรับแสดงค่าสูงสุด
+max_df = pd.DataFrame({"Column": max_values.index, "Max Value": max_values.values})
+
+# แสดงตาราง
+st.subheader("ตารางแสดงค่าสูงสุดของแต่ละคอลัมน์")
+st.dataframe(max_df)
 
 max_solidity_row = dt.loc[dt['Solidity'].idxmax()]
 st.subheader("ข้อมูลมากที่สุดของ Solidity")
